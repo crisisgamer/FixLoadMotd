@@ -1,16 +1,18 @@
 ﻿using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Modules.Cvars;
+using CounterStrikeSharp.API.Core.Attributes;
 using System.Runtime.InteropServices;
 using Microsoft.Extensions.Logging;
 using System.Text;
 
 namespace FixLoadMotd;
 
+[MinimumApiVersion(369)]
 public class Plugin : BasePlugin
 {
     public override string ModuleName => "FixLoadMotd";
-    public override string ModuleVersion => "1.0.0";
+    public override string ModuleVersion => "1.0.1";
     public override string ModuleAuthor => "xstage";
 
     private INetworkStringTableContainer? _networkStringTableContainer;
